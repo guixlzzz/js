@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Interação JavaScript</title>
+</head>
+<body>
+    <script>
+        var nome = (window.prompt('Qual o seu nome?'))
+        document.write(`Seja bem vindo(a) ${nome}, seu nome tem ${nome.length} letras. </br>`)
+        document.writeln(`Seu nome com letras maiúsculas é ${nome.toUpperCase()} </br> ` ) 
+        var n1 = Number(window.prompt('Escolha um número'))
+        var n2 = Number(window.prompt('Escolha um número'))
+        var s = n1 + n2 
+        var sal = Number(window.prompt('Qual seu salário?'))
+        document.writeln(`a soma dos números que você escolhe é ${s} </br> `)
+        document.writeln(`Seu salário é ${sal.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}`)
+    </script>
+</body>
+</html>
