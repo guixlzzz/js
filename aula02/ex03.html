@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste eventos dom</title>
+    <style>
+        div{
+            background-color: green;
+            height: 200px;
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+            font-size: 3em;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado">
+        clique
+    </div>
+    <script>
+        var bloco = document.getElementsByClassName('quadrado')[0]
+        bloco.addEventListener('click', Clicou)
+        bloco.addEventListener('mouseenter', Entrou)
+        bloco.addEventListener('mouseout', Saiu)
+        function Clicou() {
+            bloco.innerHTML = 'finalmente'
+            bloco.style.transition = "0.5s"
+        }
+        function Entrou() {
+            bloco.style.background = "red"
+            bloco.style.transition = "0.5s"
+        }
+        function Saiu() {
+            bloco.style.background = "green"
+            bloco.style.transition = "0.5s"
+        }
+    </script>
+</body>
+</html>
