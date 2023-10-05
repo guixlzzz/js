@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidades</title>
+</head>
+<body>
+    <h1>Você é brasileiro ou estrangeiro?</h1>
+    <input type="text" name="" id="naci">
+    <input type="button" value="enviar" onclick="dizer()">
+    <div id="res"></div>
+    <script>
+        function dizer() {
+            var nac = document.querySelector('input#naci')
+            var resu = document.querySelector('div#res')
+            if(nac.value != 'brasileiro') {
+                resu.innerHTML = `Você é ${nac.value}, ou seja, estrangeiro!`
+            } else {
+                resu.innerHTML = "Você é brasileiro!"
+            }
+        }
+    </script>
+    
+</body>
+</html>
