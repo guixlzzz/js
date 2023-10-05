@@ -8,19 +8,21 @@
 <body>
     <h1>Você vota ou não?</h1>
     <label for="idd">Sua idade</label>
-    <input type="text" id="idd">
+    <input type="number" id="idd">
     <input type="button" value="enviar" onclick="resultado()" >
     <div id="re">resultado</div>
     <script>
         function resultado() {
-            var id = Number(document.querySelector('input#idd'))
-            var res = document.getElementById('re')
-            var ida = Number(id.value)
-        if (ida >= 18) {
-        res.innerHTML = "Voto obrigatório"
+        var ida = document.querySelector('input#idd')
+        var res = document.querySelector('div#re')
+        if (ida.value < 16) {
+            res.innerHTML = "Não vota."
+        } 
+        else if (ida.value < 18 || ida.value >= 70) {
+            res.innerHTML = "Voto Opcional."
         }
-        else if (ida >= 16){
-            res.innerHTML = 'Voto Opcional'
+        else {
+            res.innerHTML = "Voto obrigatório."
         }
 
     }
