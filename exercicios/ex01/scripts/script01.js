@@ -3,10 +3,9 @@ function carregar() {
     var msg = document.getElementById('msg');
     var img = document.getElementById('imagem');
     var data = new Date();
-    //var hora = data.getHours();
+    var hora = data.getHours();
     var mnt = data.getMinutes()
     var s = data.getSeconds()
-    var hora = 18
     msg.innerHTML = `Agora são ${hora} horas e ${mnt} minutos e ${s} segundos.`;
     if (hora > 5 && hora < 12) {
         img.src = 'imagem/tarde.png';
