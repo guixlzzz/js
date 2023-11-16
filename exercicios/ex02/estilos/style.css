@@ -18,8 +18,7 @@ main{
     background-color: white;
     margin: auto;
     width: 400px;
-    text-align: center;
-
+    padding: 5px;
 }
 footer{
     text-align: center;

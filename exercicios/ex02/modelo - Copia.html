@@ -3,16 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detector de idades</title>
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
     <header>
-        <h1>Testando</h1>
+        <h1>Detector de idade</h1>
     </header>
     <main>
         <div>
-            testando
+            <p>
+                <label for="iano">Ano de nascimento:</label>
+                <input type="number" name="iano" id="iano">
+            </p>
+    
+                <p>
+                    Gênero:
+                    <input type="radio" name="isex" id="im" checked>
+                    <label for="im">Masculino</label>
+                    <input type="radio" name="isex" id="if">
+                    <label for="if">Feminino</label>
+                </p>
+                <input type="submit" value="Verificar" onclick="verificar()">
+            
+
         </div>
         <div>
 
