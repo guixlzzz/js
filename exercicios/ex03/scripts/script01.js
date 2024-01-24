@@ -3,19 +3,26 @@ function contar() {
     var fi = document.getElementById('ifim')
     var pas = document.getElementById('ipas')
     var res = document.getElementById('res')
-    
-    if (ini.value == 0 || fi.value == 0 ) {
-        res.innerHTML = 'Impossível contar.'
-    if (pas.value == 0) {
-        window.alert('Impossível contar! Consideramos o passo como 1.')}
+    if( ini.value == 0 || fi.value == 0) {
+        alert("[ERRO] DADOS INSUSFICIENTES!")
     } else {
-        var  i = Number(i.value)
-        var  p = Number(pas.value)
-        var  f = Number(fi.value)
-        res.innerHTML = `Contando...`
-    } if ( i < f) {
-    for ( var c = i ; c <= f ; c + p) {
-        res.innerHTML +=  `${c}`
+        var f = Number(fi.value)
+        var i = Number(ini.value)
+        var p = Number(pas.value)
+        res.innerHTML = `Contando: `
+    } if( p == 0){
+        p = 1
+        alert('[ERRO] CONSIDERAMOS O PASSO 1')
+    } 
+    if(f > i) { 
+        for(let c = i; c <= f; c += p) {
+            res.innerHTML += `${c} \u{1F449}`
+        }
+    } else {
+        for(c = i; c >= f; c -= p){
+            res.innerHTML += `${c} \u{1F449}`
+        }
+        
     }
-}
+    res.innerHTML += `\u{1F3C1}`
 }
