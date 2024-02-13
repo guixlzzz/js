@@ -11,7 +11,7 @@ function Gerar() {
             p.innerHTML = ''
             let item = document.createElement('option')
             item.value = `tab${c}`
-            item.text = `${n} x ${c} `
+            item.text = `${n} x ${c} = ${n * c} `
             tabuada.appendChild(item)
     
         } 
