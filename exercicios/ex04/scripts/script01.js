@@ -1,16 +1,21 @@
 function Gerar() {
-    var nt = document.getElementById('int')
-    var res = document.getElementById('res')
-    var nut = Number(nt.value)
     if (nt.value == 0 || nt.value == undefined) {
-        window.alert('Por favor, selecione um número.')
+    let num = document.getElementById('int')
+    let tabuada = document.getElementById('tabid')
+    if (num.value == 0){
+        window.alert('POR FAVOR DIGITE UM NÚMERO!')
+    } else {
+        let n = Number(num.value)
+        tabuada.innerHTML = ''
+        for (let c = 1; c <= 10; c++) {
+            var p = document.getElementById('p')
+            p.innerHTML = ''
+            let item = document.createElement('option')
+            item.value = `tab${c}`
+            item.text = `${n} x ${c} `
+            tabuada.appendChild(item)
+    
+        } 
     }
-    var c = 1
-    while (c <= 10){
-        c++
-        var r2 = nut * c
-        res.innerHTML = `${nut} x ${c} = ${r2}`
-    }
-    }
-
 }
+
