@@ -1,5 +1,4 @@
 function Gerar() {
-    if (nt.value == 0 || nt.value == undefined) {
     let num = document.getElementById('int')
     let tabuada = document.getElementById('tabid')
     if (num.value == 0){
